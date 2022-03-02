@@ -1,0 +1,149 @@
+.landing-section {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 10rem;
+    padding-right: 10rem;
+
+    &__intro-p {
+        @include landing-heading-text;
+    }
+
+    &__middle-p {
+        @include landing-middle-text;
+    }
+
+    &__p {
+        width: 45ch;
+        @include p-text;
+    }
+
+    &__red-p {
+        color: $feature-red;
+    }
+}
+
+.values-section {
+    width: 100%;
+    height: 70vh;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    margin-bottom: 5rem;
+
+    &__container {
+        width: 100%;
+        height: 100%;
+        border: 2px solid $light-outline;
+        border-radius: 5px;
+        display: flex;
+    }
+
+    &__div {
+        width: 33%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    &__div-left {
+        border-right: 1px solid $light-outline;
+    }
+
+    &__div-middle {
+        border-left: 1px solid $light-outline;
+        border-right: 1px solid $light-outline;
+    }
+
+    &__div-right {
+        border-left: 1px solid $light-outline;
+    }
+
+    &__text-div {
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__emoji {
+        font-size: 3rem;
+    }
+
+    &__heading {
+        @include p-text;
+        font-size: 2rem;
+    }
+
+    &__p {
+        @include p-text;
+    }
+}
+
+// media queries/responsive design
+@media only screen and (max-width: 600px) {
+    .landing-section {
+        padding-left: 4rem;
+        padding-right: 4rem;
+
+        &__into-p {
+            font-size: 2rem;
+        }
+
+        &__middle-p {
+            width: 35ch;
+            font-size: 1.6rem;
+        }
+    }
+
+    .values-section {
+        max-width: 100vw;
+        height: 200vh;
+        padding: 0px;
+        padding-left: 4rem;
+        padding-right: 4rem;
+
+        &__container {
+            width: 100%;
+            border: none;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &__div {
+            width: 100%;
+            border: 2px solid $light-outline;
+            border-radius: 5px;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+    .landing-section {
+        padding-left: 5rem;
+        padding-right: 5rem;
+
+        &__into-p {
+            font-size: 2rem;
+        }
+
+        &__middle-p {
+            width: 45ch;
+            font-size: 1.6rem;
+        }
+    }
+
+    .values-section {
+        height: 93vh;
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+}
