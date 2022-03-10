@@ -11,6 +11,11 @@
     line-height: 2.2rem;
 }
 
+@mixin light-p-text {
+    @include p-text;
+    color:  $light-text-colour;
+}
+
 @mixin landing-heading-text {
     width: 40ch;
     @include p-text;

@@ -8,7 +8,7 @@ function Landing() {
         <>
             <div className="landing-section">
                 <p className="landing-section__intro-p">👋🏼   Hey, I’m Ruby!</p>
-                <p className="landing-section__middle-p">I’m a Web Developer and User Experience Designer with a passion for creative problem-solving.</p>
+                <p className="landing-section__middle-p">I’m a Web Developer and User Experience Designer that loves creative problem-solving.</p>
                 <p className="landing-section__p">I'm currently studying <span className="landing-section__red-p">@Yoobee</span>, and building my programmer tool-belt along the way through side projects, Udemy, and Codecademy.</p>
             </div>
 

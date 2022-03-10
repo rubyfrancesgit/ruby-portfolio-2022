@@ -12,6 +12,8 @@
 
     &__h1 {
         @include p-text;
+        // font-family: 'Shrikhand', cursive;
+        // letter-spacing: .1rem;
         color: $text-colour !important;
         font-size: 2.5rem;
         margin-bottom: 3rem;
@@ -52,6 +54,8 @@
 
         &__heading {
             @include p-text;
+            // font-family: 'Shrikhand', cursive;
+            // letter-spacing: .1rem;
             font-size: 1.8rem;
             color: $text-colour !important;
         }
@@ -102,6 +106,8 @@
 
         &__heading {
             @include p-text;
+            // font-family: 'Shrikhand', cursive;
+            // letter-spacing: .1rem;
             font-size: 1.8rem;
             color: $text-colour !important;
         }
