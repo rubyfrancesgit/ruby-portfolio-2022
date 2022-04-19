@@ -1,12 +1,13 @@
 .web-info-section {
     width: 100%;
-    height: 62vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    padding-top: 10rem;
     padding-left: 10rem;
     padding-right: 10rem;
+    padding-bottom: 10rem;
 
     &__heading {
         @include landing-heading-text;
@@ -28,8 +29,9 @@
 
 .tool-belt {
     width: 100%;
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-bottom: 10rem;
 
     &__container {
         width: 100%;
@@ -69,7 +71,16 @@
     padding-left: 10rem;
     padding-right: 10rem;
     padding-bottom: 2rem;
-    display: flex;
+
+    &__heading {
+        @include p-text;
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    &__container {
+        display: flex;
+    }
 
     &__card {
         width: 18rem;

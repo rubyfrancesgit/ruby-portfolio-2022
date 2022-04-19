@@ -16,7 +16,7 @@
         // letter-spacing: .1rem;
         color: $text-colour !important;
         font-size: 2.5rem;
-        margin-bottom: 3rem;
+        margin-bottom: 4rem;
     }
 
     &__div {
@@ -39,6 +39,10 @@
 @media only screen and (max-width: 600px) {
     .side-nav {
         display: none;
+
+        &__li  {
+            margin-bottom: 0rem;
+        }
     }
 
     .top-nav {
@@ -91,6 +95,10 @@
 @media only screen and (min-width: 600px) and (max-width: 1023px) {
     .side-nav {
         display: none;
+
+        &__li  {
+            margin-bottom: 0rem;
+        }
     }
 
     .top-nav {

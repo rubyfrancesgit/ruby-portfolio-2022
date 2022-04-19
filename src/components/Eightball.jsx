@@ -43,7 +43,7 @@ function Eightball() {
     
         $('#answer').append(
             `
-                <p>${answer}</p>
+                <p class="fade-in">${answer}</p>
             `
         );
     }

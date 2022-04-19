@@ -7,7 +7,7 @@ function Landing() {
     return (
         <>
             <div className="landing-section">
-                <p className="landing-section__intro-p">👋🏼   Hey, I’m Ruby!</p>
+                <p className="landing-section__intro-p"><span className="landing-section__wave">👋🏼</span> Hey, I’m Ruby!</p>
                 <p className="landing-section__middle-p">I’m a Web Developer and User Experience Designer that loves creative problem-solving.</p>
                 <p className="landing-section__p">I'm currently studying <span className="landing-section__red-p">@Yoobee</span>, and building my programmer tool-belt along the way through side projects, Udemy, and Codecademy.</p>
             </div>
@@ -20,7 +20,7 @@ function Landing() {
                         <div className="values-section__text-div">
                             <p className="values-section__heading">Designer</p>
 
-                            <p className="values-section__p">I value clean, clear, and engaging design. I like to explore the personality of different design styles.</p> 
+                            <p className="values-section__p">I value clean, clear, and engaging design. I enjoy exploring the personality of different design styles.</p> 
 
                             <p className="values-section__p"><b>I enjoy designing:</b>
                                 <br />
@@ -34,6 +34,8 @@ function Landing() {
                             </p>
                         </div>
                     </div>
+
+                    <div className="values-section__border"></div>
 
                     <div className="values-section__div values-section__div-middle">
                         <p className="values-section__emoji">‍💻</p>
@@ -57,13 +59,15 @@ function Landing() {
                         </div>
                     </div>
 
+                    <div className="values-section__border"></div>
+
                     <div className="values-section__div values-section__div-right">
                         <p className="values-section__emoji">📖</p>
 
                         <div className="values-section__text-div">
                             <p className="values-section__heading">Infinite learner</p>
 
-                            <p className="values-section__p">I’m passionate about the intersection where creative meets technical.</p>
+                            <p className="values-section__p">I’m thrive at the intersection where creative meets technical.</p>
 
                             <p className="values-section__p"><b>Education:</b>
                                 <br />

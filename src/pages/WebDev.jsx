@@ -71,21 +71,25 @@ function WebDev() {
                     </div>
 
                     <div className="web-projects">
-                        <div className="web-projects__card web-projects__card-b-g" onClick={launch8BallModal}>
-                            <img className="web-projects__img" />
+                        <p className="web-projects__heading">Projects</p>
 
-                            <div className="web-projects__text-div hide">
-                                <p className="arcade__p">Magic 8 ball</p>
-                                <button className="arcade__play-btn">Play</button>
+                        <div className="web-projects__container">
+                            <div className="web-projects__card web-projects__card-b-g">
+                                <img className="web-projects__img" />
+
+                                <div className="web-projects__text-div hide">
+                                    <p className="arcade__p">Magic 8 ball</p>
+                                    <button className="arcade__play-btn">Play</button>
+                                </div>
                             </div>
-                        </div>
 
-                        <div className="web-projects__card web-projects__card-p-b" onClick={launchMadLibsModal}>
-                            <img className="web-projects__img" />
+                            <div className="web-projects__card web-projects__card-p-b">
+                                <img className="web-projects__img" />
 
-                            <div className="web-projects__text-div hide">
-                                <p className="web-projects__p">Emoji mad libs</p>
-                                <button className="web-projects__play-btn">Play</button>
+                                <div className="web-projects__text-div hide">
+                                    <p className="web-projects__p">Emoji mad libs</p>
+                                    <button className="web-projects__play-btn">Play</button>
+                                </div>
                             </div>
                         </div>
                     </div>
