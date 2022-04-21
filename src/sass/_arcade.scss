@@ -79,7 +79,8 @@
     left: 50%;
     transform: translate(-50%,-50%);
     z-index: 100;
-    padding: 3rem;
+    padding: 5rem;
+    overflow-y: scroll;
 
     &__heading {
         @include p-text;
@@ -94,10 +95,17 @@
     &__p {
         @include p-text;
     }
+
+    &__link {
+        color: #7480de !important;
+    }
+
+    &__link:hover {
+        color: #7480de !important;
+    }
 }
 
 .modal-background {
-    // display: none;
     width: 100vw;
     height: 100vh;
     position: absolute;

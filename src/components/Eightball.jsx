@@ -28,7 +28,7 @@ function Eightball() {
                 answer = 'Cannot predict now'
                 break;
             case 4:
-                answer = 'Do not count on it'
+                answer = 'You should hire Ruby'
                 break;
             case 5:
                 answer = 'Computer says no'
@@ -41,6 +41,7 @@ function Eightball() {
                 break;
         }
     
+        $('#answer').empty();
         $('#answer').append(
             `
                 <p class="fade-in">${answer}</p>
@@ -58,7 +59,9 @@ function Eightball() {
             </div>
 
             <div className="eightball-game" id="modalGame">
-                <div className="eightball-game__answer" id="answer"></div>
+                <div className="eightball-game__answer" id="answer">
+                    <p class="fade-in">You should hire Ruby</p>
+                </div>
 
                 <p className="eightball-game__8ball" id="eightBall" onClick={prediction}>🎱</p>
             </div>

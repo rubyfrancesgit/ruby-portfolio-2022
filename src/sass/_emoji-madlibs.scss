@@ -1,11 +1,12 @@
 .madlibs-game {
     width: 100%;
-    height: 80%;
+    height: 55%;
     @include center;
     flex-direction: column;
+    margin-top: 2rem;
 
     &__emojis{
-        font-size: 10rem;
+        font-size: 8rem;
         cursor: pointer;
         user-select: none;
         margin: 0px;
@@ -31,71 +32,23 @@
     }
 
     &__input-div {
+        width: 100%;
         display: flex;
+        @include center;
     }
 
     &__arrow-emoji {
         font-size: 2rem;
         margin-left: 1rem;
     }
-    
-    // &__img1{
-    //     display: none;
-    // }
-    
-    // &__img2{
-    //     display: none;
-    // }
-    
-    // &__img3{
-    //     display: none;
-    // }
-    
-    // &__img4{
-    //     display: none;
-    // }
-    
-    // &__img5{
-    //     display: none;
-    // }
-    
-    // &__img-run{
-    //     display: none;
-    // }
-    
-    // &__img-kiss{
-    //     display: none;
-    // }
-    
-    // &__story-p1{
-    //     display: none;
-    // }
-    
-    // &__story-p2{
-    //     display: none;
-    // }
-    
-    // &__story-p3{
-    //     display: none;
-    // }
-    
-    // &__story-p4{
-    //     display: none;
-    // }
-    
-    // &__story-p5{
-    //     display: none;
-    // }
-    
-    // &__story-run{
-    //     display: none;
-    // }
-    
-    // &__story-kiss{
-    //     display: none;
-    // }
-    
-    // &__active{
-    //     display: block;
-    // }
+
+    &__end-btn-l {
+        font-size: 2rem;
+        margin-right: 1rem;
+    }
+
+    &__end-btn-r {
+        font-size: 2rem;
+        margin-left: 1rem;
+    }
 }

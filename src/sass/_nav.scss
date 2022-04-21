@@ -9,6 +9,7 @@
     background-color: $light-mist;
     padding-top: 7rem;
     float: left;
+    box-shadow: 3px 0px 5px lightgray;
 
     &__h1 {
         @include p-text;

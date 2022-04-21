@@ -49,7 +49,7 @@ function EmojiMadlibs() {
     const storyRun = document.querySelector('.story-run');
 
     function ontoPartTwo() {
-        if(fairyPrinceName !== "") {
+        if(fairyPrinceName !== '') {
             setEmojiOneClasses('madlibs-game__emojis hide');
             setEmojiTwoClasses('madlibs-game__emojis');
 
@@ -59,11 +59,13 @@ function EmojiMadlibs() {
     }
 
     function ontoPartThree() {
-        setEmojiTwoClasses('madlibs-game__emojis hide');
-        setEmojiThreeClasses('madlibs-game__emojis');
+        if(magicPower !== '') {
+            setEmojiTwoClasses('madlibs-game__emojis hide');
+            setEmojiThreeClasses('madlibs-game__emojis');
 
-        setStoryPartTwo('madlibs-game__emojis hide');
-        setStoryPartThree('madlibs-game__emojis');
+            setStoryPartTwo('madlibs-game__emojis hide');
+            setStoryPartThree('madlibs-game__emojis');
+        }
     }
 
     function ontoPartFour() {
@@ -75,11 +77,13 @@ function EmojiMadlibs() {
     }
 
     function ontoPartFive() {
-        setEmojiFourClasses('madlibs-game__emojis hide');
-        setEmojiFiveClasses('madlibs-game__emojis');
+        if(frogName !== '') {
+            setEmojiFourClasses('madlibs-game__emojis hide');
+            setEmojiFiveClasses('madlibs-game__emojis');
 
-        setStoryPartFour('madlibs-game__emojis hide');
-        setStoryPartFive('madlibs-game__emojis');
+            setStoryPartFour('madlibs-game__emojis hide');
+            setStoryPartFive('madlibs-game__emojis');
+        }
     }
 
     function ontoRunFinale() {
@@ -98,12 +102,41 @@ function EmojiMadlibs() {
         setStoryPartSixKiss('madlibs-game__emojis');
     }
 
+    function resetGame() {
+        setFairyPrinceName('');
+        setMagicPower('');
+        setFrogName('');
+
+        document.getElementById('fairyPrinceNameInput').value = '';
+        document.getElementById('fairyPrincePowerInput').value = '';
+        document.getElementById('frogNameInput').value = '';
+
+        setEmojiOneClasses('madlibs-game__emojis');
+        setEmojiTwoClasses('madlibs-game__emojis hide');
+        setEmojiThreeClasses('madlibs-game__emojis hide');
+        setEmojiFourClasses('madlibs-game__emojis hide');
+        setEmojiFiveClasses('madlibs-game__emojis hide');
+        setEmojiRunClasses('madlibs-game__emojis hide');
+        setEmojiPregnantClasses('madlibs-game__emojis hide');
+
+        setStoryPartOne('madlibs-game__emojis');
+        setStoryPartTwo('madlibs-game__emojis hide');
+        setStoryPartThree('madlibs-game__emojis hide');
+        setStoryPartFour('madlibs-game__emojis hide');
+        setStoryPartFive('madlibs-game__emojis hide');
+        setStoryPartSixRun('madlibs-game__emojis hide');
+        setStoryPartSixKiss('madlibs-game__emojis hide');
+    }
+
     return (
         <>
             <div className="modal__text-div" id="modalText">
                 <h1 className="modal__heading">Emoji Mad Libs</h1>
-                <p className="modal__light-p">Nov 2021</p>
-                {/* <p className="modal__p">I've kept most of the original code for this game, errors and all. The mistakes ended up being the funniest part of the game, and incidentally my first programmer joke.</p> */}
+                <p className="modal__light-p">Nov 2021 & Apr 2022</p>
+                <p className="modal__p">I've updated the code to work with React as I could no longer manipulate the DOM using jQuery.
+                <br />
+                <br />
+                The original code can be found <a className="modal__link" href="https://github.com/rubyfrancesgit/emoji-madlibs-v1" target="_blank">here</a>, errors and all. The mistakes in the earlier version ended up being the funniest part of the game, and incidentally lead me to make my first programmer joke.</p>
             </div>
 
             <div className="madlibs-game" id="modalGame">
@@ -120,18 +153,17 @@ function EmojiMadlibs() {
                     <div className={storyPartOne}>
                         <p className="madlibs-game__story">Once upon a time there lived a fairy prince called...</p>
 
-                        <form className="madlibs-game__input-div">
-                            <input className="madlibs-game__input" type="text" autoComplete="off" onChange={e => setFairyPrinceName(e.target.value)} required />
+                        <form className="madlibs-game__input-div" onSubmit={e => e.preventDefault()}>
+                            <input className="madlibs-game__input" id="fairyPrinceNameInput" type="text" autoComplete="off" onChange={e => setFairyPrinceName(e.target.value)} required />
                             <button className="madlibs-game__arrow-emoji" type="submit" onClick={ontoPartTwo}>➡️</button>
                         </form>
-                        
                     </div>
                     
                     <div className={storyPartTwo}>
                         <p className="madlibs-game__story madlibs-game__text2">{fairyPrinceName}'s magic power was...</p>
 
-                        <form className="madlibs-game__input-div">
-                            <input className="madlibs-game__input" type="text" autoComplete="off" onChange={e => setMagicPower(e.target.value)} required />
+                        <form className="madlibs-game__input-div" onSubmit={e => e.preventDefault()}>
+                            <input className="madlibs-game__input" id="fairyPrincePowerInput" type="text" autoComplete="off" onChange={e => setMagicPower(e.target.value)} required />
                             <button className="madlibs-game__arrow-emoji" type="submit" onClick={ontoPartThree}>➡️</button>
                         </form>
                     </div>
@@ -139,32 +171,41 @@ function EmojiMadlibs() {
                     <div className={storyPartThree}>
                         <p className="madlibs-game__story madlibs-game__text3">{fairyPrinceName} was the most talented at {magicPower} in all the land!</p>
 
-                        <p className="madlibs-game__arrow-emoji" onClick={ontoPartFour}>➡️</p>
+                        <div className="madlibs-game__input-div">
+                            <p className="madlibs-game__arrow-emoji" onClick={ontoPartFour}>➡️</p>
+                        </div>
                     </div>
                     
                     <div className={storyPartFour}>
                         <p className="madlibs-game__story">One day {fairyPrinceName} was approached by a frog named...</p>
 
-                        <form className="madlibs-game__input-div">
-                            <input className="madlibs-game__input madlibs-game__input4" type="text" autoComplete="off" onChange={e => setFrogName(e.target.value)} required />
+                        <form className="madlibs-game__input-div" onSubmit={e => e.preventDefault()}>
+                            <input className="madlibs-game__input madlibs-game__input4" id="frogNameInput" type="text" autoComplete="off" onChange={e => setFrogName(e.target.value)} required />
                             <button className="madlibs-game__arrow-emoji" type="submit" onClick={ontoPartFive}>➡️</button>
                         </form>
                     </div>
 
                     <div className={storyPartFive}>
                         <p className="madlibs-game__story">{frogName} pleaded with {fairyPrinceName}, "Great fairy prince, I need your magnificent {magicPower} skills to help me turn back into a person!"</p>
-                        <button className="endBtn" onClick={ontoRunFinale}>🏃</button>
-                        <button className="endBtn" onClick={ontoKissFinale}>👄</button>
+
+                        <div className="madlibs-game__input-div">
+                            <button className="madlibs-game__end-btn-l" type="button" onClick={ontoRunFinale}>🏃</button>
+                            <button className="madlibs-game__end-btn-r" type="button" onClick={ontoKissFinale}>👄</button>
+                        </div>
                     </div>
 
                     <div className={storyPartSixRun}>
-                        <button>Reset Game</button>
+                        <div className="madlibs-game__input-div">
+                            <button type="button" onClick={resetGame}>Reset Game</button>
+                        </div>
                     </div>
 
                     <div className={storyPartSixKiss}>
                         <p className="madlibs-game__story">That escalated quicky...</p>
 
-                        <button>Reset Game</button>
+                        <div className="madlibs-game__input-div">
+                            <button type="button" onClick={resetGame}>Reset Game</button>
+                        </div>
                     </div>
                     
                 </div>
