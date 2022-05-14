@@ -68,6 +68,14 @@ li {
     overflow-x: hidden;
 }
 
+#dark {
+    background-color: $dark-background;
+}
+
+#light {
+    background-color: white;
+}
+
 // media queries/responsive design
 @media only screen and (max-width: 600px) {
     .right-page {

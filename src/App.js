@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { createContext, useState } from "react";
 
 // pages
 import Home from './pages/Home';
@@ -7,18 +8,28 @@ import WebDev from "./pages/WebDev";
 import UxUi from "./pages/UxUi";
 import Arcade from "./pages/Arcade";
 
+export const ThemeContext = createContext(null);
+
 function App() {
+  const [theme, setTheme] = useState("dark");
+
+  // const toggleTheme = () => {
+  //   setTheme((curr) => (curr === "dark" ? "light" : "dark"));
+  // }
+
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/web-development" element={<WebDev />} />
-            <Route path="/ux-ui" element={<UxUi />} />
-            <Route path="/arcade" element={<Arcade />} />
-        </Routes>
-      </BrowserRouter>
+    <div className="App" id={theme}>
+      <ThemeContext.Provider value={{theme, setTheme}}>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/web-development" element={<WebDev />} />
+              <Route path="/ux-ui" element={<UxUi />} />
+              <Route path="/arcade" element={<Arcade />} />
+          </Routes>
+        </BrowserRouter>
+      </ThemeContext.Provider>
     </div>
   );
 }

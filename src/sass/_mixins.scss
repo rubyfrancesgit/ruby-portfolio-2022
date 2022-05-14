@@ -4,11 +4,36 @@
     align-items: center;
 }
 
+@mixin p-text-darkmode {
+    font-family: $text-font;
+    color: white;
+    font-size: 1.4rem;
+}
+
+@mixin light-p-text-darkmode {
+    @include p-text-darkmode;
+    color:  $light-text-colour;
+}
+
+@mixin landing-heading-text-darkmode {
+    @include p-text-darkmode;
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+@mixin landing-middle-text-darkmode {
+    @include p-text-darkmode;
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
 @mixin p-text {
     font-family: $text-font;
     color: $text-colour;
     font-size: 1.4rem;
-    line-height: 2.2rem;
 }
 
 @mixin light-p-text {
@@ -17,7 +42,6 @@
 }
 
 @mixin landing-heading-text {
-    width: 40ch;
     @include p-text;
     font-size: 3rem;
     font-weight: 400;
@@ -25,7 +49,6 @@
 }
 
 @mixin landing-middle-text {
-    width: 40ch;
     @include p-text;
     font-size: 2rem;
     font-weight: bolder;

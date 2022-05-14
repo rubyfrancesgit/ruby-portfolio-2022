@@ -1,14 +1,12 @@
 import React from 'react'
 import Landing from '../components/Landing'
-import Nav from '../components/Nav'
+import ProgrammingToolbelt from '../components/ProgrammingToolbelt'
 
 function Home() {
     return (
         <>
-            <Nav />
-            <div className="right-page">
-                <Landing />
-            </div>
+            <Landing />
+            <ProgrammingToolbelt />
         </>
     )
 }
