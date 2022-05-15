@@ -35,6 +35,16 @@ function Arcade() {
         setApiDipModalClasses("modal hide");
     }
 
+    const showHoverInfo = (id) => {
+        document.getElementById(id).classList.remove("hide");
+        console.log('hover');
+    }
+
+    const hideHoverInfo = (id) => {
+        document.getElementById(id).classList.add("hide");
+        console.log('hover');
+    }
+
     return (
         <>
             <div className={eightBallModalClasses} id="8BallModal">
@@ -69,10 +79,10 @@ function Arcade() {
                 </div>
 
                 <div className="arcade">
-                    <div className="arcade__card arcade__card-b-g" onClick={launch8BallModal}>
+                    <div className="arcade__card arcade__card-b-g" onClick={launch8BallModal} onMouseOver={() => showHoverInfo("8BallInfo")}  onMouseOut={() => hideHoverInfo("8BallInfo")} >
                         <p className="arcade__big-emoji">🎱</p>
 
-                        <div className="arcade__text-div hide">
+                        <div className="arcade__text-div hide" id="8BallInfo">
                             <p className="arcade__p">Magic 8 ball</p>
                             <button className="arcade__play-btn">Play</button>
                         </div>

@@ -1,0 +1,35 @@
+#dark .school-projects {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    margin-top: 20vh;
+
+    &__text-div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    &__heading {
+        @include heading-darkmode;
+        margin-bottom: 2rem;
+    }
+
+    &__p {
+        @include p-text-darkmode;
+        width: 65ch;
+        text-align: right;
+        margin-bottom: 3rem;
+    }
+
+    &__project-div {
+        cursor: pointer;
+    }
+
+    &__img {
+        width: 20vw;
+    }
+}

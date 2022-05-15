@@ -1,0 +1,26 @@
+#dark .personal-projects {
+    width: 100vw;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    background-color: $dark-background-lighter;
+    padding-top: 10vh;
+
+    &__heading {
+        @include heading-darkmode;
+        margin-bottom: 2rem;
+    }
+
+    &__p {
+        @include p-text-darkmode;
+        width: 65ch;
+        margin-bottom: 3rem;
+    }
+
+    &__project-div {
+        cursor: pointer;
+    }
+
+    &__img {
+        width: 20vw;
+    }
+}

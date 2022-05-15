@@ -13,14 +13,18 @@
     padding-right: 20vw;
 
     &__intro-p {
-        @include landing-heading-text-darkmode;
+        @include p-text-darkmode;
         font-size: 4rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
     }
 
     &__middle-p {
-        @include landing-middle-text-darkmode;
+        @include heading-darkmode;
         width: 35ch;
         font-size: 3rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
     }
 
     &__p {
@@ -47,9 +51,9 @@
     &__wave {
         font-size: 5.5rem;
         margin-right: 1rem;
-        animation-name: wave-animation 3s;
-        animation-duration: 3s;
-        transform-origin: 70% 70%;
+        animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+        animation-duration: 3s;        /* Change to speed up or slow down */
+        transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
         display: inline-block;
         cursor: pointer;
     }
@@ -144,9 +148,9 @@
 
     @keyframes starTwinkle {
         0% { transform: scale(1) }
-        25% { transform: scale(1.3) }
+        25% { transform: scale(1.4) }
         50% { transform: scale(1) }
-        75% { transform: scale(1.2) }
+        75% { transform: scale(1.3) }
         100% { transform: scale(1) }
     }
 }
@@ -166,14 +170,18 @@
     padding-right: 20vw;
 
     &__intro-p {
-        @include landing-heading-text;
+        @include p-text;
         font-size: 4rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
     }
 
     &__middle-p {
-        @include landing-middle-text;
+        @include heading;
         width: 35ch;
         font-size: 3rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
     }
 
     &__p {
@@ -219,7 +227,7 @@
         40% { transform: rotate(-4.0deg) }
         50% { transform: rotate(10.0deg) }
         60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
-    100% { transform: rotate( 0.0deg) }
+        100% { transform: rotate( 0.0deg) }
     }  
 
     &__bottom-left-star-div {
@@ -297,9 +305,9 @@
 
     @keyframes starTwinkle {
         0% { transform: scale(1) }
-        25% { transform: scale(1.3) }
+        25% { transform: scale(1.4) }
         50% { transform: scale(1) }
-        75% { transform: scale(1.2) }
+        75% { transform: scale(1.3) }
         100% { transform: scale(1) }
     }
 }
@@ -321,7 +329,7 @@
         }
     
         &__p {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             max-width: 80vw;
         }
 
