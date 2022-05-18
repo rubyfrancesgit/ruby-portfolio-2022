@@ -17,16 +17,16 @@ function Landing() {
           <p className="landing-section__p">I'm currently studying <a href="https://www.yoobee.ac.nz/courses/design/diploma-in-web-and-ux-design/" target="_blank" className="landing-section__red-p">@Yoobee</a>, and building my programmer tool-belt & computer science fundamentals along the way with Udemy courses, Codecademy, and good old fashioned textbooks!</p>
       </div>
 
-      <div className="landing-section__bottom-left-star-div">
-        <img className="landing-section__big-star-bl landing-section__twinkle" src={bigStar} alt="star icon" />
-        <img className="landing-section__small-star-one-bl landing-section__twinkle" src={smallStar} alt="star icon" />
-        <img className="landing-section__small-star-two-bl landing-section__twinkle" src={smallStar} alt="star icon" />
-      </div>
-
       <div className="landing-section__top-right-star-div">
         <img className="landing-section__big-star-tr landing-section__twinkle" src={bigStar} alt="star icon" />
         <img className="landing-section__small-star-one-tr landing-section__twinkle" src={smallStar} alt="star icon" />
         <img className="landing-section__small-star-two-tr landing-section__twinkle" src={smallStar} alt="star icon" />
+      </div>
+
+      <div className="landing-section__bottom-left-star-div">
+        <img className="landing-section__big-star-bl landing-section__twinkle" src={bigStar} alt="star icon" />
+        <img className="landing-section__small-star-one-bl landing-section__twinkle" src={smallStar} alt="star icon" />
+        <img className="landing-section__small-star-two-bl landing-section__twinkle" src={smallStar} alt="star icon" />
       </div>
 
       <div className="landing-section__bottom-left-star-div-yellow">
