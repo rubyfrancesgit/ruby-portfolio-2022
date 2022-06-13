@@ -4,6 +4,7 @@ import React from 'react';
 import earthenwaresSquare from "../assets/earthenwares-square.png";
 import peruseSquare from "../assets/peruse-square.png";
 import stayNzSquare from "../assets/stay-nz-square.png";
+import theTaxLadySquare from "../assets/theTaxLady-square.png";
 import bigStar from '../assets/big-star.svg';
 import smallStar from '../assets/small-star.svg';
 import bigStarYellow from '../assets/big-star-yellow.svg';
@@ -45,7 +46,7 @@ function SchoolProjects() {
         </div>
 
         <div className="school-projects__project-div school-projects__project-div-o-p">
-          <img className="school-projects__img" src={stayNzSquare} alt="iPhone mockup of Stay NZ project" />
+          <img className="school-projects__img" src={stayNzSquare} alt="iPhone mockup of Stay NZ website" />
 
           <div className="school-projects__hover-info hide">
               <p className="school-projects__p"></p>
@@ -61,6 +62,16 @@ function SchoolProjects() {
               <button className="school-projects__btn">Check it out</button>
           </div>
         </div>
+
+        <div className="school-projects__project-div school-projects__project-div-b-g">
+          <img className="school-projects__img" src={theTaxLadySquare} alt="website mockup of The Tax website" />
+
+          <div className="school-projects__hover-info hide">
+              <p className="school-projects__p"></p>
+              <button className="school-projects__btn">Check it out</button>
+          </div>
+        </div>
+
       </div>
     </div>
   )

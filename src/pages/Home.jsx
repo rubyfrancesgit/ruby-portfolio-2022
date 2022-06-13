@@ -1,4 +1,5 @@
 import React from 'react'
+import ArcadeIntro from '../components/ArcadeIntro'
 import Landing from '../components/Landing'
 import PersonalProjects from '../components/PersonalProjects'
 import ProgrammingToolbelt from '../components/ProgrammingToolbelt'
@@ -11,6 +12,7 @@ function Home() {
             <ProgrammingToolbelt />
             <PersonalProjects />
             <SchoolProjects />
+            <ArcadeIntro />
         </>
     )
 }

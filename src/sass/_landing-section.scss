@@ -9,12 +9,12 @@
     -o-background-size: cover;
     background-size: cover;
     padding-top: 15vh;
-    padding-left: 20vw;
-    padding-right: 20vw;
+    padding-left: 15vw;
+    padding-right: 15vw;
 
     &__intro-p {
         @include p-text-darkmode;
-        font-size: 4rem;
+        font-size: 3rem;
         font-weight: 400;
         margin-bottom: 1rem;
     }
@@ -22,15 +22,13 @@
     &__middle-p {
         @include heading-darkmode;
         width: 35ch;
-        font-size: 3rem;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
     }
 
     &__p {
-        width: 50ch;
+        width: 55ch;
         @include p-text-darkmode;
-        font-size: 2rem;
     }
 
     &__red-p {
@@ -44,16 +42,14 @@
 
     &__feature-word {
         font-family: $feature-font;
-        font-size: 3rem;
+        font-size: 2.8rem;
         letter-spacing: .1rem;
     }
 
     &__wave {
-        font-size: 5.5rem;
+        font-size: 4rem;
         margin-right: 1rem;
-        animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
-        animation-duration: 3s;        /* Change to speed up or slow down */
-        transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+        animation: wave-animation 3s;
         display: inline-block;
         cursor: pointer;
     }
@@ -166,12 +162,12 @@
     -o-background-size: cover;
     background-size: cover;
     padding-top: 15vh;
-    padding-left: 20vw;
-    padding-right: 20vw;
+    padding-left: 15vw;
+    padding-right: 15vw;
 
     &__intro-p {
         @include p-text;
-        font-size: 4rem;
+        font-size: 3rem;
         font-weight: 400;
         margin-bottom: 1rem;
     }
@@ -179,15 +175,13 @@
     &__middle-p {
         @include heading;
         width: 35ch;
-        font-size: 3rem;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
     }
 
     &__p {
         width: 50ch;
         @include p-text;
-        font-size: 2rem;
     }
 
     &__red-p {
@@ -201,12 +195,12 @@
 
     &__feature-word {
         font-family: $feature-font;
-        font-size: 3rem;
+        font-size: 2.8rem;
         letter-spacing: .1rem;
     }
 
     &__wave {
-        font-size: 5.5rem;
+        font-size: 4rem;
         margin-right: 1rem;
         animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
         animation-duration: 3s;        /* Change to speed up or slow down */

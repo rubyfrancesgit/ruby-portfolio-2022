@@ -8,7 +8,6 @@
     padding-left: 10vw;
     padding-right: 10vw;
     padding-bottom: 15vh;
-    background-color: $light-mist;
 
     &__text-div {
         width: 100%;
@@ -32,14 +31,15 @@
     }
 
     &__projects-container {
-        // width: 100%;
-        overflow-x: scroll;
+        width: 100%;
         display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     &__project-div {
-        width: 30rem;
-        height: 30rem;
+        width: 25rem;
+        height: 25rem;
         @include center;
         border: 12px solid white;
         box-shadow: 5px 5px 10px $text-colour;
@@ -47,6 +47,7 @@
         margin-right: 5rem;
         cursor: pointer;
         flex-shrink: 0;
+        margin-bottom: 5rem;
     }
 
     &__project-div-b-g {
@@ -80,7 +81,6 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        // transform: translate(-50%, -50%);
     }
 
     &__btn {
@@ -144,9 +144,10 @@
     align-items: flex-end;
     justify-content: center;
     padding-top: 15vh;
+    padding-left: 10vw;
     padding-right: 10vw;
     padding-bottom: 15vh;
-    background-color: $dark-background-lighter;
+    background-color: $dark-background;
 
     &__text-div {
         width: 100%;
@@ -170,20 +171,22 @@
     }
 
     &__projects-container {
-        overflow-x: scroll;
+        width: 100%;
         display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     &__project-div {
-        width: 30rem;
-        height: 30rem;
+        width: 25rem;
+        height: 25rem;
         @include center;
         border: 12px solid $dark-background-lighter;
-        box-shadow: 5px 5px 10px rgb(29, 29, 29);
+        box-shadow: 5px 5px 10px rgb(29, 29, 29);;
         margin: 1rem;
         margin-right: 5rem;
+        margin-bottom: 5rem;
         cursor: pointer;
-        flex-shrink: 0;
     }
 
     &__project-div-b-g {

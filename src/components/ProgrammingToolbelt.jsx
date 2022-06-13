@@ -129,6 +129,12 @@ function ProgrammingToolbelt() {
                 </div>
 
                 <div className="tool-belt__div">
+                    <img className="tool-belt__icon" src={firebase} onMouseOver={() => showHoverText(["Firebase", "firebaseHoverText"])} onMouseOut={() => hideHoverText("firebaseHoverText")} alt="MongoDB icon" />
+
+                    <p className="tool-belt__hover-text hide" id="firebaseHoverText" onMouseOver={() => showHoverText(["Firebase", "firebaseHoverText"])} onMouseOut={() => hideHoverText("firebaseHoverText")} >{hoverText}</p>
+                </div>
+
+                <div className="tool-belt__div">
                     <img className="tool-belt__icon tool-belt__gulp" src={gulp} onMouseOver={() => showHoverText(["Gulp", "gulpHoverText"])} onMouseOut={() => hideHoverText("gulpHoverText")} alt="Gulp icon" />
 
                     <p className="tool-belt__hover-text hide" id="gulpHoverText" onMouseOver={() => showHoverText(["Gulp", "gulpHoverText"])} onMouseOut={() => hideHoverText("gulpHoverText")} >{hoverText}</p>
@@ -138,12 +144,6 @@ function ProgrammingToolbelt() {
                     <img className="tool-belt__icon" src={bootstrap} onMouseOver={() => showHoverText(["Bootstrap", "bootstrapHoverText"])} onMouseOut={() => hideHoverText("bootstrapHoverText")} alt="MongoDB icon" />
 
                     <p className="tool-belt__hover-text hide" id="bootstrapHoverText" onMouseOver={() => showHoverText(["Bootstrap", "bootstrapHoverText"])} onMouseOut={() => hideHoverText("bootstrapHoverText")} >{hoverText}</p>
-                </div>
-
-                <div className="tool-belt__div">
-                    <img className="tool-belt__icon" src={firebase} onMouseOver={() => showHoverText(["Firebase", "firebaseHoverText"])} onMouseOut={() => hideHoverText("firebaseHoverText")} alt="MongoDB icon" />
-
-                    <p className="tool-belt__hover-text hide" id="firebaseHoverText" onMouseOver={() => showHoverText(["Firebase", "firebaseHoverText"])} onMouseOut={() => hideHoverText("firebaseHoverText")} >{hoverText}</p>
                 </div>
 
                 

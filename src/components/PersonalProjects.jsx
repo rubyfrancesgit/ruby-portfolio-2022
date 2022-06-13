@@ -10,6 +10,15 @@ import bigStarYellow from '../assets/big-star-yellow.svg';
 import smallStarYellow from '../assets/small-star-yellow.svg';
 
 function PersonalProjects() {
+
+  const projectInfoHover = (id) => {
+    document.getElementById(id).classList.remove("hide");
+  } 
+
+  const hideProjectInfoHover = (id) => {
+    document.getElementById(id).classList.add("hide");
+  } 
+
   return (
     <div className="personal-projects">
       <div className="personal-projects__container">
@@ -25,17 +34,21 @@ function PersonalProjects() {
         </div>
 
         <div className="personal-projects__projects-container">
-            <div className="personal-projects__project-div personal-projects__project-div-b-g">
-              <img className="personal-projects__img" src={materielleSquare} alt="iPhone mockup of Materielle project" />
-
-              <div className="personal-projects__hover-info hide">
-                  <p className="personal-projects__p"></p>
-                  <button className="personal-projects__btn">Check it out</button>
+            <div className="personal-projects__project-div personal-projects__project-div-b-g" onMouseOver={() => projectInfoHover("materielleInfo")} onMouseOut={() => hideProjectInfoHover("materielleInfo")}>
+              <div className="personal-projects__hover-info hide" id="materielleInfo">
+                  <p className="personal-projects__info-p">Info about Materielle</p>
+                  <button className="personal-projects__info-btn">Check it out</button>
               </div>
+
+              <img className="personal-projects__img" src={materielleSquare} alt="iPhone mockup of Materielle project" />
             </div>
 
-            <div className="personal-projects__project-div personal-projects__project-div-p-b">
-              <img className="personal-projects__img" src={hobbiSquare} alt="iPhone mockup of Materielle project" />
+            <div className="personal-projects__project-div personal-projects__project-div-p-b" onMouseOver={() => projectInfoHover("hobbiInfo")} onMouseOut={() => hideProjectInfoHover("hobbiInfo")}>
+              <img className="personal-projects__img" src={hobbiSquare} alt="Website mockup of Hello Hobbi project" />
+              <div className="personal-projects__hover-info hide" id="hobbiInfo">
+                  <p className="personal-projects__info-p">Info about Hello Hobbi</p>
+                  <button className="personal-projects__info-btn">Check it out</button>
+              </div>
 
               <div className="personal-projects__hover-info hide">
                   <p className="personal-projects__p"></p>

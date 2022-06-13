@@ -2,8 +2,9 @@
     width: 100vw;
     padding-top: 15vh;
     padding-left: 10vw;
-    padding-right: 10vw;
+    // padding-right: 10vw;
     padding-bottom: 15vh;
+    background-color: $light-mist;
 
     &__text-div {
         position: relative;
@@ -27,10 +28,10 @@
     }
 
     &__project-div {
-        width: 30rem;
-        height: 30rem;
+        width: 25rem;
+        height: 25rem;
         @include center;
-        border: 12px solid $light-mist;
+        border: 12px solid white;
         box-shadow: 5px 5px 10px $text-colour;
         margin: 1rem;
         margin-right: 5rem;
@@ -113,8 +114,9 @@
     width: 100vw;
     padding-top: 15vh;
     padding-left: 10vw;
-    padding-right: 10vw;
+    // padding-right: 10vw;
     padding-bottom: 15vh;
+    background-color: $dark-background-lighter;
 
     &__text-div {
         position: relative;
@@ -138,15 +140,47 @@
     }
 
     &__project-div {
-        width: 30rem;
-        height: 30rem;
+        width: 25rem;
+        height: 25rem;
         @include center;
-        border: 12px solid $dark-background-lighter;
-        box-shadow: 5px 5px 10px rgb(29, 29, 29);
+        border: 12px solid $dark-background;
+        box-shadow: 5px 5px 10px rgb(29, 29, 29);;
         margin: 1rem;
         margin-right: 5rem;
         cursor: pointer;
         flex-shrink: 0;
+        position: relative;
+    }
+
+    &__hover-info {
+        width: 100%;
+        height: 100%;
+        @include center;
+        flex-direction: column;
+        background-color: #0000008c;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+
+    &__hover-info:hover {
+        animation: info-text-hover .5s;
+    }
+
+    @keyframes info-text-hover {
+        0% { background-color: transparent }
+        100% { background-color: #0000008c }
+    }
+
+    &__info-p {
+        @include p-text-darkmode;
+    }
+
+    &__info-btn {
+        @include solid-btn;
     }
 
     &__project-div-b-g {
