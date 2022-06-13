@@ -4,6 +4,10 @@
     @include center;
     flex-direction: column;
     margin-top: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 
     &__emojis{
         font-size: 8rem;
@@ -37,9 +41,15 @@
         @include center;
     }
 
+    &__input {
+        @include input;
+    }
+
     &__arrow-emoji {
         font-size: 2rem;
         margin-left: 1rem;
+        border: none;
+        background: none;
     }
 
     &__end-btn-l {

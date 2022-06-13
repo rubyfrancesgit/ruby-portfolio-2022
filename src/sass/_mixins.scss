@@ -71,3 +71,18 @@
     background: $feature-blue;
     color: white !important;
 }
+
+@mixin input {
+    @include center;
+    @include p-text;
+    background-color: $light-mist;
+    text-decoration: none;
+    border: 1px solid $light-text-colour;
+    border-radius: 4px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin: 5px 0;
+    cursor: pointer;
+}

@@ -144,7 +144,7 @@
         height: 25rem;
         @include center;
         border: 12px solid $dark-background;
-        box-shadow: 5px 5px 10px rgb(29, 29, 29);;
+        box-shadow: 5px 5px 10px rgb(29, 29, 29);
         margin: 1rem;
         margin-right: 5rem;
         cursor: pointer;
@@ -157,7 +157,7 @@
         height: 100%;
         @include center;
         flex-direction: column;
-        background-color: #0000008c;
+        background-color: #0000009c;
         position: absolute;
         margin-left: auto;
         margin-right: auto;
@@ -172,7 +172,7 @@
 
     @keyframes info-text-hover {
         0% { background-color: transparent }
-        100% { background-color: #0000008c }
+        100% { background-color: #0000009c }
     }
 
     &__info-p {

@@ -133,7 +133,7 @@ function EmojiMadlibs() {
             <div className="modal__text-div" id="modalText">
                 <h1 className="modal__heading">Emoji Mad Libs</h1>
                 <p className="modal__light-p">Nov 2021 & Apr 2022</p>
-                <p className="modal__p">I've updated the code to work with React as I could no longer manipulate the DOM using jQuery.
+                <p className="modal__p hide">I've updated the code as the original game used jQuery to manipulate the dom, which isn't possible using React.
                 <br />
                 <br />
                 The original code can be found <a className="modal__link" href="https://github.com/rubyfrancesgit/emoji-madlibs-v1" target="_blank">here</a>, errors and all. The mistakes in the earlier version ended up being the funniest part of the game, and incidentally lead me to make my first programmer joke.</p>

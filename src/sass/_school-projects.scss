@@ -181,12 +181,37 @@
         width: 25rem;
         height: 25rem;
         @include center;
-        border: 12px solid $dark-background-lighter;
-        box-shadow: 5px 5px 10px rgb(29, 29, 29);;
+        border: 12px solid $dark-background;
+        box-shadow: 5px 5px 10px rgb(29, 29, 29);
         margin: 1rem;
         margin-right: 5rem;
         margin-bottom: 5rem;
         cursor: pointer;
+        flex-shrink: 0;
+        position: relative;
+    }
+
+    &__hover-info {
+        width: 100%;
+        height: 100%;
+        @include center;
+        flex-direction: column;
+        background-color: #0000009c;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+
+    &__hover-info:hover {
+        animation: info-text-hover .5s;
+    }
+
+    @keyframes info-text-hover {
+        0% { background-color: transparent }
+        100% { background-color: #0000009c }
     }
 
     &__project-div-b-g {
